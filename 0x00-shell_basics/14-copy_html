@@ -1,3 +1,2 @@
 #!/bin/bash
-copy .. *.html -u
- 
+copy .. *.html -u 
