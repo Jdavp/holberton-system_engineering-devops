@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that displays ls
+LISTA=$(ls)
+for i in $LISTA;
+do
+    echo "$i" | cut -d- -f2
+done
