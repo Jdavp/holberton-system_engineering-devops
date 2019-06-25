@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script that displays I am invincible!!! when receiving a SIGTERM signal
+
+pkill -f "7-highlander"
