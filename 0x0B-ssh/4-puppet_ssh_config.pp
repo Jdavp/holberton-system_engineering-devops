@@ -1,5 +1,5 @@
 #Client configuration file (w/ Puppet)
-exec { 'resource title':
-path	    => '/etc/ssh/ssh_config',
+exec { 'echo':
+path	    => '/usr/bin/echo',
 command     => 'echo -e "IdentityFile ~/.ssh/holberton\nPasswordAuthentication no"',`
 }
