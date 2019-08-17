@@ -3,7 +3,7 @@
 apt-get -y update
 apt-get -y install nginx
 sudo sed -i "25i \\\trewrite ^/redirect_me https://www.youtube.com/watch?v=VDvr08sCPOc permanent;" /etc/nginx/sites-available/default
-echo -e "Ceci n'est pas une page\n" | sudo tee /var/www/html/error/404.html
+echo -e "Ceci n'est pas une page\n" | sudo tee /var/www/html/404.html
 sudo sed -i "25i \\\terror_page 404 /404.html;\n\tlocation = /404.html {\n\troot /var/www/html;\n\t\internal;\n\t}" /etc/nginx/sites-available/default
 sudo service nginx stop
 sudo service nginx start
