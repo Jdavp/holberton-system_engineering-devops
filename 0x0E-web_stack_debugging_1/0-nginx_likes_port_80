@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #restablish server with port connection on 80#
+
 sudo apt-get update
 sudo apt-get install curl
-sudo sed -i 's/8080/80/' /etc/nginx/site-enabled/default
+sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
 sudo service nginx restart
