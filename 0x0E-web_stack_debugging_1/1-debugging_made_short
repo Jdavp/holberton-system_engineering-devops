@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #restablish server with port connection on 80#
-
 sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
 sudo service nginx restart
-sudo pkill -o nginx
+sudo pkill -o -n nginx
