@@ -1,4 +1,4 @@
-B# change line with puppet
+# change line with puppet
 exec { 'replace a setting line':
   command  => 'sed -i "s/15/5000/g" /etc/default/nginx',
   provider => shell
