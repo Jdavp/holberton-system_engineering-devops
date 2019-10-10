@@ -1,3 +1,4 @@
+# change line with puppet
 exec { 'replace a setting line':
   command  => '/usr/bin/sudo /
   /bin/sed -i "s/n- 15/-n 5000/g" /etc/default/nginx',
