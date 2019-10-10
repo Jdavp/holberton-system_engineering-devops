@@ -1,11 +1,13 @@
-Bexec { 'replace a setting line':
-  command => '/usr/bin/sudo /bin/sed -i "s/hard nofile 5/hard nofile 30048/g" /etc/security/limits.conf',
-  }
-
+# replace line at os level
+exec { 'replace a setting soft':
+  command     => 'sed -i "s/5/30048/g" /etc/security/limits.conf',
+  provider    => shell,
+  }->
+exec { 'replace a setting hard':
+  command     => 'sed -i "s/4/10048/g" /etc/security/limits.conf',
+  provider    => shell, 
+  }->
 exec { 'replace a setting line':
-  command => '/usr/bin/sudo /bin/sed -i "s/soft nofile 4/soft nofile 10048/g" /etc/security/limits.conf,
-  }
-
-exec { 'replace a setting line':
-  command => '/usr/bin/sudo /sbin/sysctl -p',
+  command     => 'sysctl -p',
+  provider    => shell, 
   }
